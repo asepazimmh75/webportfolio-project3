@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous">
+    <title>Asep Aziz Miftahulhuda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Menggunakan url_for untuk file CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            font-family: "Bebas Neue", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron jumbotron-fluid" id="home">
+        <div class="context">
+            <h1 class="display-4">Asep Aziz Miftahulhuda</h1>
+            <p class="lead">Content Writer & Graphic Designer</p>
+        </div>
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section pt-0" id="about">
+        <div class="container text-center">
+            <div class="about">
+                <!-- Menggunakan url_for untuk gambar -->
+                <img src="{{ url_for('static', filename='menobg.png') }}" alt="Me">
+                <div class="about-text">
+                    <h2 class="section-title mb-3 font">About Me</h2>
+                    <p>Hi! Perkenalkan nama saya Asep Aziz Miftahulhuda, saya merupakan seorang mahasiswa jurusan Teknik
+                        Informatika semester lima. Pada portfolio ini saya akan menunjukkan skill-skill yang saya kuasai
+                        sebagai bahan pertimbangan untuk bekerja nanti. Saya juga memiliki beberapa hobi yang saya
+                        sering
+                        lakukan, mulai dari kuliner, mendengarkan musik, olahraga terutama lari dan bermain game,
+                        hobi-hobi itulah yang kerap saya lakukan di sela-sela aktivitas saya.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white" id="portfolio">
+        <div class="container">
+            <h2 class="text-center mb-5">My Experience</h2>
+            <div class="row">
+                <div class="col-md-4 mb-5 d-flex flex-column align-items-center text-center">
+                    <!-- Menggunakan url_for untuk gambar -->
+                    <img class="img-fluid" src="{{ url_for('static', filename='web1.png') }}" alt="">
+                    <h3 class="mb-3">Graphic Designer</h3>
+                    <p>Mengedit sebuah gambar dan mengubahnya menjadi template pada iklan merupakan pekerjaan juga,
+                        disini saya memiliki beberapa jobdesk seperti mengedit gambar, mendesain background dan
+                        menempatkan berbagai macam desain-desain unik sehingga menjadi sebuah keindahan.
+                    </p>
+                    <a class="btn btn-primary mt-auto" href="#">View Project</a>
+                </div>
+                <div class="col-md-4 mb-5 d-flex flex-column align-items-center text-center">
+                    <!-- Menggunakan url_for untuk gambar -->
+                    <img class="img-fluid" src="{{ url_for('static', filename='web2.png') }}" alt="">
+                    <h3 class="mb-3">Content Writer</h3>
+                    <p>Saya pernah bekerja sebagai seorang content writer, yang dimana saya kerap mengumpulkan berbagai
+                        macam konten-konten menarik sehingga saya tulis menjadi sebuah content pada website.
+                    </p>
+                    <a class="btn btn-primary mt-auto" href="#">View Project</a>
+                </div>
+                <div class="col-md-4 mb-5 d-flex flex-column align-items-center text-center">
+                    <!-- Menggunakan url_for untuk gambar -->
+                    <img class="img-fluid" src="{{ url_for('static', filename='web3.png') }}" alt="">
+                    <h3 class="mb-3">Videographer</h3>
+                    <p>Merekam berbagai macam angle dan menyatukannya menjadi sebuah video berdurasi pendek atau panjang
+                        juga merupakan salah satu pekerjaan yang pernah saya tekuni. Saya menggunakan software video
+                        editor dalam menjalankan berbagai macam editing yang ditempatkan di berbagai video sehingga
+                        menjadi satu kesatuan yang enak ketika ditonton.
+                    </p>
+                    <a class="btn btn-primary mt-auto" href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+        <div class="container pt-4">
+            <section class="mb-4">
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://www.facebook.com/asepaziz.miftahulhuda" role="button" data-mdb-ripple-color="dark"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://www.linkedin.com/in/asep-aziz-miftahulhuda/" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/asepazimmh75"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+            </section>
+        </div>
+
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2020 Copyright:
+            <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybV5DAUw5c6DljB1p4UgKUtBcu9BtT5LRn5zK4p5M5vJfELkP"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93qGat62nDbE2Q4F4wGFj9/4UU6bSCh3vpaPRyyj7XsIuw/1k5jz0V8ELT6zI/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
